@@ -1,0 +1,12 @@
+{
+    "git.ignoreLimitWarning": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.pythonPath": "python3",
+    // /usr/local/opt/python3/bin/python3.6
+    "files.exclude": {
+        "*.metadata": true, 
+        "*.settings": true,        
+        "**/*.pyc": true
+    }
+}
