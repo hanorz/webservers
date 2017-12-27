@@ -3,8 +3,8 @@ from . import admin,api
 from flask import render_template,redirect,url_for,jsonify,request,abort
 from app.admin.forms import LoginForm
 import json
-from flask.ext import restful
-from flask.ext.restful import reqparse, abort, Api, Resource
+# from flask.ext import restful
+from flask_restful import reqparse, abort, Api, Resource
 from app import db
 
 def abort_if_todo_doesnt_exist(todo_id):
@@ -12,14 +12,14 @@ def abort_if_todo_doesnt_exist(todo_id):
         abort(404, message="Todo {} doesn't exist".format(todo_id))
 
 
-class HelloWorld(restful.Resource):
+class HelloWorld(Resource):
     def get(self,getid):
         return {'hello': getid}
 
 
 api.add_resource(HelloWorld, '/getid/<string:getid>')
 
-class Posttest(restful.Resource):
+class Posttest(Resource):
 
     def post(self):
         
