@@ -2,6 +2,6 @@
 from app import app
 
 if __name__ == "__main__":
-	app.run(port=5001)
+	app.run()
 
 	# ssh -i /Users/zhongwenhan/Desktop/webservers/webServers.pem ubuntu@13.230.246.216
